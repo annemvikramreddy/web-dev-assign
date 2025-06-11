@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Personal Details Form (POST)</title>
+</head>
+<body>
+  <h1>Personal Details (POST)</h1>
+  
+  <form action="" method="post">
+
+    
+    <label>
+      Full Name:
+      <input
+        type="text"
+        name="fullname"
+        placeholder="Enter the Name"
+        required
+        maxlength="50"
+      >
+    </label>
+    <br><br>
+
+    
+    <label>
+      Age:
+      <input
+        type="number"
+        name="age"
+        min="1"
+        max="120"
+        step="1"
+        required
+      >
+    </label>
+    <br><br>
+
+    
+    <fieldset>
+      <legend>Gender:</legend>
+      <label><input type="radio" name="gender" value="female" required> Female</label>
+      <label><input type="radio" name="gender" value="male"> Male</label>
+      <label><input type="radio" name="gender" value="other"> Other</label>
+    </fieldset>
+    <br>
+
+    
+    <fieldset>
+      <legend>Hobbies:</legend>
+      <label><input type="checkbox" name="hobbies" value="reading"> Reading</label>
+      <label><input type="checkbox" name="hobbies" value="sports"> Sports</label>
+      <label><input type="checkbox" name="hobbies" value="music"> Music</label>
+      <label><input type="checkbox" name="hobbies" value="travel"> Travel</label>
+    </fieldset>
+    <br>
+
+    
+    <label>
+      Country:
+      <select name="country" required>
+        <option value="" disabled>Select one…</option>
+        <option value="us" selected>United States</option>
+        <option value="ca">Canada</option>
+        <option value="in">India</option>
+      </select>
+    </label>
+    <br><br>
+
+    
+    <label>
+      Short Bio:
+      <br>
+      <textarea
+        name="bio"
+        rows="4"
+        cols="40"
+        maxlength="200"
+        placeholder="Tell us a bit about yourself…"
+      ></textarea>
+    </label>
+    <br><br>
+
+    
+    <label>
+      Email:
+      <input
+        type="email"
+        name="email"
+        placeholder="you@example.com"
+        required
+        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+      >
+    </label>
+    <br><br>
+
+  
+    <label>
+      Password:
+      <input
+        type="password"
+        name="password"
+        minlength="8"
+        maxlength="20"
+        required
+      >
+    </label>
+    <br><br>
+
+    
+    <label>
+      Date of Birth:
+      <input
+        type="date"
+        name="dob"
+        max="2025-06-11"
+        min="1900-01-01"
+        required
+      >
+    </label>
+    <br><br>
+
+    
+    <button type="submit">Submit (POST)</button>
+  </form>
+</body>
+</html>
