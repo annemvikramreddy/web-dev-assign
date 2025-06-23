@@ -1,0 +1,175 @@
+var myString = "Hello";      // string
+
+let myNumber = 42;           // number
+
+const myBoolean = true;      // boolean
+
+ 
+
+// Reassigning to different types
+
+myString = 100;             
+
+myNumber = "JS";             
+
+myBoolean = "false";       
+
+                             
+
+ 
+
+VM212:9 Uncaught TypeError: Assignment to constant variable.
+
+    at <anonymous>:9:11
+
+(anonymous) @ VM212:9
+
+let firstName = "Alex";
+
+let _age = 30;
+
+let $salary = 50000;
+
+let isDone = false;
+
+let total2 = 100;  
+
+ 
+
+undefined
+
+let 1stPlace = "Gold";      
+
+let user name = "admin";
+
+let for = "loop";   
+
+VM232:1 Uncaught SyntaxError: Invalid or unexpected token
+
+console.log(typeof "JavaScript");   // "string"
+
+console.log(typeof 2024);           // "number"
+
+console.log(typeof true);           // "boolean"
+
+console.log(typeof undefined);      // "undefined"
+
+console.log(typeof null);           // "object"    ← this is a long-standing JS quirk
+
+console.log(typeof [1, 2, 3]);      // "object"    // arrays are objects
+
+console.log(typeof {name: "Alex"}); // "object"
+
+console.log(typeof function() {});
+
+VM236:1 string
+
+VM236:2 number
+
+VM236:3 boolean
+
+VM236:4 undefined
+
+VM236:5 object
+
+VM236:6 object
+
+VM236:7 object
+
+VM236:8 function
+
+undefined
+
+let a = 10;
+
+let b = a;
+
+b = 20;
+
+ 
+
+console.log(a, b);
+
+ 
+
+ 
+
+let obj1 = { name: "Sam" };
+
+let obj2 = obj1;
+
+obj2.name = "Alex";
+
+ 
+
+console.log(obj1, obj2); 
+
+VM243:5 10 20
+
+VM243:12 {name: 'Alex'} {name: 'Alex'}
+
+undefined
+
+let x = 100;
+
+console.log(x, typeof x);   
+
+ 
+
+x = "one hundred";
+
+console.log(x, typeof x); 
+
+ 
+
+x = { value: 100 };
+
+console.log(x, typeof x)
+
+VM269:2 100 'number'
+
+VM269:5 one hundred string
+
+VM269:8 {value: 100} 'object'
+
+undefined
+
+let resultA = "5" + 3;
+
+console.log(resultA, typeof resultA);
+
+VM273:2 53 string
+
+undefined
+
+let resultB = "5" - 2;
+
+console.log(resultB, typeof resultB);
+
+VM277:2 3 'number'
+
+undefined
+
+let resultB = "5" - 2;
+
+console.log(resultB, typeof resultB);
+
+VM281:2 3 'number'
+
+undefined
+
+let resultD = "hello" * 2;
+
+console.log(resultD, typeof resultD);
+
+VM285:2 NaN 'number'
+
+undefined
+
+let resultE = null + 5;
+
+console.log(resultE, typeof resultE);
+
+VM289:2 5 'number'
+
+undefined

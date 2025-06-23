@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Keyboard Events</title>
+</head>
+<body>
+  <h2>Test Key Events</h2>
+  <!-- onkeydown -->
+  <input
+    type="text"
+    placeholder="Type here"
+    onkeydown="alert('Key down triggered')"
+  />
+  <!-- onkeyup -->
+  <input
+    type="text"
+    placeholder="Type again"
+    onkeyup="alert('Key up triggered')"
+  />
+  <!-- onkeypress -->
+  <input
+    type="text"
+    placeholder="Type a character"
+    onkeypress="alert('Key press triggered')"
+  />
+  <h2>Select a Fruit</h2>
+  <!-- onchange -->
+  <select onchange="if(this.value) alert('You selected: ' + this.value)">
+    <option value="">-- Select --</option>
+    <option value="apple">Apple</option>
+    <option value="banana">Banana</option>
+    <option value="mango">Mango</option>
+  </select>
+  <br /><br />
+  <!-- onclick -->
+  <button onclick="alert('Button clicked!')">Click Me</button>
+  <h2>Submit the Form</h2>
+  <!-- onsubmit -->
+  <form onsubmit="alert('Form submitted')">
+    <label>Enter your name:</label>
+    <input type="text" name="name" />
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!-- flex-pricing.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Pricing</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 2rem; }
+    .pricing-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .card {
+      flex: 1 1 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+    .card:nth-child(2) {
+      flex: 2 1 320px;
+      transform: scale(1.1);
+      border-color: #007BFF;
+    }
+    .card h2 { margin: 0 0 1rem; }
+    .card .price { font-size: 2rem; margin-bottom: 1rem; }
+    .card ul { list-style: none; padding: 0; }
+    .card ul li { margin: 0.5rem 0; }
+    .card button {
+      margin-top: auto;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      background: #007BFF;
+      color: #fff;
+      cursor: pointer;
+    }
+    @media (max-width: 600px) {
+      .pricing-container {
+        flex-direction: column-reverse;
+      }
+      .card:nth-child(2) { order: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="pricing-container">
+    <div class="card">
+      <h2>Basic</h2>
+      <div class="price">$9</div>
+      <ul>
+        <li>🔒 Secure Access</li>
+        <li>📊 Basic Analytics</li>
+        <li>📧 Email Support</li>
+      </ul>
+      <button>Subscribe</button>
+    </div>
+    <div class="card">
+      <h2>Pro</h2>
+      <div class="price">$29</div>
+      <ul>
+        <li>🚀 Fast Performance</li>
+        <li>📈 Advanced Analytics</li>
+        <li>💬 Live Chat Support</li>
+      </ul>
+      <button>Subscribe</button>
+    </div>
+    <div class="card">
+      <h2>Enterprise</h2>
+      <div class="price">$99</div>
+      <ul>
+        <li>🏢 Team Accounts</li>
+        <li>🔧 Custom Integrations</li>
+        <li>📞 24/7 Support</li>
+      </ul>
+      <button>Subscribe</button>
+    </div>
+  </div>
+</body>
+</html>
+
+<!-- grid-news.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid News Layout</title>
+  <style>
+    body { font-family: Georgia, serif; margin: 0; padding: 0; }
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "headline headline"
+        "article1 article2"
+        "article3 sidebar"
+        "article4 sidebar"
+        "footer footer";
+      grid-gap: 1rem;
+      grid-template-columns: 1fr 1fr;
+      padding: 1rem;
+    }
+    header { grid-area: header; background: #333; color: #fff; padding: 1rem; }
+    .headline { grid-area: headline; background: #f4f4f4; padding: 1rem; }
+    .article1 { grid-area: article1; background: #fff; padding: 1rem; }
+    .article2 { grid-area: article2; background: #fff; padding: 1rem; }
+    .article3 { grid-area: article3; background: #fff; padding: 1rem; }
+    .article4 { grid-area: article4; background: #fff; padding: 1rem; }
+    aside { grid-area: sidebar; background: #efefef; padding: 1rem; }
+    footer { grid-area: footer; background: #333; color: #fff; padding: 1rem; text-align: center; }
+    @media (max-width: 600px) {
+      .container {
+        grid-template-areas:
+          "header"
+          "headline"
+          "article1"
+          "article2"
+          "article3"
+          "article4"
+          "sidebar"
+          "footer";
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>Magazine Header</header>
+    <div class="headline">Main Headline Article</div>
+    <article class="article1">Article 1 Content</article>
+    <article class="article2">Article 2 Content</article>
+    <article class="article3">Article 3 Content</article>
+    <article class="article4">Article 4 Content</article>
+    <aside>Sidebar Content</aside>
+    <footer>Footer Information</footer>
+  </div>
+</body>
+</html>
+
+<!-- float-breakdown.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Float Breakdown</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; }
+    .pricing-container { /* Broken layout */ }
+    .pricing-container .card {
+      float: left;
+      width: 30%;
+      margin: 1%;
+      border: 1px solid #ccc;
+      padding: 1rem;
+      /* box-sizing: content-box; parent will collapse */
+    }
+    .clearfix:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    /* Fixed layout */
+    .fixed-container {
+      overflow: auto;
+    }
+    .fixed-container .card {
+      float: left;
+      width: 30%;
+      margin: 1%;
+      padding: 1rem;
+      box-sizing: border-box;
+      border: 1px solid #007BFF;
+    }
+  </style>
+</head>
+<body>
+  <h2>Broken Layout</h2>
+  <div class="pricing-container">
+    <div class="card">
+      <h3>Basic</h3>
+      <p>$9</p>
+      <ul><li>🔒 Secure</li><li>📊 Analytics</li><li>📧 Support</li></ul>
+      <button>Subscribe</button>
+    </div>
+    <div class="card">
+      <h3>Pro</h3>
+      <p>$29</p>
+      <ul><li>🚀 Fast</li><li>📈 Advanced</li><li>💬 Live Chat</li></ul>
+      <button>Subscribe</button>
+    </div>
+    <div class="card">
+      <h3>Enterprise</h3>
+      <p>$99</p>
+      <ul><li>🏢 Team</li><li>🔧 Custom</li><li>📞 24/7</li></ul>
+      <button>Subscribe</button>
+    </div>
+  </div>
+
+  <h2>Fixed Layout</h2>
+  <div class="fixed-container clearfix">
+    <div class="card">
+      <h3>Basic</h3>
+      <p>$9</p>
+      <ul><li>🔒 Secure</li><li>📊 Analytics</li><li>📧 Support</li></ul>
+      <button>Subscribe</button>
+    </div>
+    <div class="card">
+      <h3>Pro</h3>
+      <p>$29</p>
+      <ul><li>🚀 Fast</li><li>📈 Advanced</li><li>💬 Live Chat</li></ul>
+      <button>Subscribe</button>
+    </div>
+    <div class="card">
+      <h3>Enterprise</h3>
+      <p>$99</p>
+      <ul><li>🏢 Team</li><li>🔧 Custom</li><li>📞 24/7</li></ul>
+      <button>Subscribe</button>
+    </div>
+  </div>
+</body>
+</html>
