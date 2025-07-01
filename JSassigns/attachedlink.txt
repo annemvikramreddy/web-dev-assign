@@ -1,2 +1,4 @@
 1. https://www.programiz.com/online-compiler/9CcCfbwjGpumF ---functions
 2. https://www.programiz.com/online-compiler/9787MIoGwOlY2 --- loops
+3. https://www.programiz.com/online-compiler/60n0dBpWnULPn ---objects
+4. https://www.programiz.com/online-compiler/12E2x1h6ife9S --- callback
