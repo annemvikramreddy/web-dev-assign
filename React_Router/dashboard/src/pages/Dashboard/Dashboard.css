@@ -1,0 +1,30 @@
+.dashboard-page {
+  padding: 1rem 0;
+}
+.dashboard-page h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+.dashboard-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.dashboard-nav a {
+  color: #fff;
+  background: #3498db;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.dashboard-nav a:hover,
+.dashboard-nav a.active {
+  background: #2980b9;
+}
+.dashboard-content {
+  padding: 1rem;
+  background: #ecf0f1;
+  border-radius: 6px;
+}
